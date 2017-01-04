@@ -1,0 +1,13 @@
+#!/bin/bash
+
+source /opt/minecraft/current.cfg 2>/dev/null
+
+BASEDIR="/opt/minecraft"
+BINDIR="$BASEDIR/bin"
+
+RAMDISK="$BASEDIR/ramdisk"
+HOTDIR="$RAMDISK/$INSTANCENAME"
+
+LOGDIR="$HOTDIR/logs"
+COLDDIR="$BASEDIR/instances/$INSTANCENAME"
+BACKUPDIR="$BASEDIR/backups"

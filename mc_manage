@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source /opt/minecraft/config
+
+command_type="$1"
+shift
+
+case $command_type in
+    init) $BINDIR/init_server.sh ;;
+   start) cset proc minecraft --exec $BINDIR/start_server.sh ;;
+    stop) $BINDIR/stop_server.sh ;;
+  status) $BINDIR/status.sh ;;
+     cmd) $BINDIR/send_command.sh $@ ;;
+esac
